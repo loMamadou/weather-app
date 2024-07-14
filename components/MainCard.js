@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { ctoF } from "../services/converters";
+import { DateAndTime } from "../components/DateAndTime"; 
+import { MetricsCard } from "../components/MetricsCard"; 
 import styles from "./MainCard.module.css";
 
 export const MainCard = ({
@@ -16,6 +18,7 @@ export const MainCard = ({
         {city}, {country}
       </h1>
       <p className={styles.description}>{description}</p>
+      <DateAndTime weatherData={weatherData} unitSystem={unitSystem} />
       <Image
         width="300px"
         height="300px"
@@ -35,6 +38,15 @@ export const MainCard = ({
           : Math.round(ctoF(weatherData.main.feels_like))}
         °{unitSystem == "metric" ? "C" : "F"}
       </p>
+    
+      <div className={styles.metricsWrapper}>
+        <MetricsCard
+          title={"Humidity"}
+          iconSrc={"/icons/humidity.png"}
+          metric={weatherData.main.humidity}
+          unit={"%"}
+        /> 
+      </div>
     </div>
   );
 };

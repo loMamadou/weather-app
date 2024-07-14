@@ -11,30 +11,30 @@ import styles from "./MetricsBox.module.css";
 export const MetricsBox = ({ weatherData, unitSystem }) => {
   return (
     <div className={styles.wrapper}>
-      <MetricsCard
+      {/* { <MetricsCard
         title={"Humidity"}
         iconSrc={"/icons/humidity.png"}
         metric={weatherData.main.humidity}
         unit={"%"}
-      />
-      <MetricsCard
+      /> } */}
+      {/* <MetricsCard
         title={"Wind speed"}
         iconSrc={"/icons/wind.png"}
         metric={getWindSpeed(unitSystem, weatherData.wind.speed)}
         unit={unitSystem == "metric" ? "m/s" : "m/h"}
-      />
-      <MetricsCard
+      /> */}
+      {/* <MetricsCard
         title={"Wind direction"}
         iconSrc={"/icons/compass.png"}
         metric={degToCompass(weatherData.wind.deg)}
-      />
-      <MetricsCard
+      /> */}
+      {/* <MetricsCard
         title={"Visibility"}
         iconSrc={"/icons/binocular.png"}
         metric={getVisibility(unitSystem, weatherData.visibility)}
         unit={unitSystem == "metric" ? "km" : "miles"}
-      />
-      <MetricsCard
+      /> */}
+      {/* <MetricsCard
         title={"Sunrise"}
         iconSrc={"/icons/sunrise.png"}
         metric={getTime(
@@ -47,8 +47,8 @@ export const MetricsBox = ({ weatherData, unitSystem }) => {
           weatherData.sys.sunrise,
           weatherData.timezone
         )}
-      />
-      <MetricsCard
+      /> */}
+      {/* <MetricsCard
         title={"Sunset"}
         iconSrc={"/icons/sunset.png"}
         metric={getTime(
@@ -57,7 +57,7 @@ export const MetricsBox = ({ weatherData, unitSystem }) => {
           weatherData.timezone
         )}
         unit={getAMPM(unitSystem, weatherData.sys.sunset, weatherData.timezone)}
-      />
+      /> */}
     </div>
   );
 };

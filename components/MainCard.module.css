@@ -1,18 +1,40 @@
 .wrapper {
+  background-color: #f0f8ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
   text-align: center;
-  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.wrapper:hover {
+  transform: translateY(-5px); /* Effet de levitation au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
 }
 
 .location {
-  font-size: 38px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px; /* Espacement en bas du titre */
 }
 
 .description {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  color: #666;
+  margin: 10px 0;
 }
 
 .temperature {
-  font-size: 84px;
+  font-size: 48px;
+  color: #ff4500;
+  margin: 20px 0;
+}
+
+.metricsWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
