@@ -20,7 +20,7 @@ export const App = () => {
 
     const latitude = currentJson.latitude;
     const longitude = currentJson.longitude;
-    const currentTime = currentJson.current.time;
+    const currentTime = Math.floor(Date.now()/1000);
     const temperature = currentJson.current.temperature_2m;
     const feelsLike = currentJson.current.apparent_temperature;
     const humidity = currentJson.current.relative_humidity_2m;
@@ -111,26 +111,6 @@ export const App = () => {
         weatherData={weatherData}
 
       />
-      <ContentBox>
-        <Header>
-         
-          {/* <Search
-            placeHolder="Search a city..."
-            value={cityInput}
-            onFocus={(e) => {
-              e.target.value = "";
-              e.target.placeholder = "";
-            }}
-            onChange={(e) => setCityInput(e.target.value)}
-            onKeyDown={(e) => {
-              e.keyCode === 13 && setTriggerFetch(!triggerFetch);
-              e.target.placeholder = "Search a city...";
-            }}
-          /> */}
-        </Header>
-        
-        {/* <UnitSwitch onClick={changeSystem} unitSystem={unitSystem} /> */}
-      </ContentBox>
     </div>
   ) : weatherData && weatherData.message ? (
     <ErrorScreen errorMessage="City not found, try again!">
